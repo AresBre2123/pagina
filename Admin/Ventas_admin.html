@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+        <link rel="stylesheet" href="style\ventas.css">
+        <link rel="stylesheet" href="style\style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQq7Ml8WsgGqyC05XgoaX/Eg6/\_Hlh seIw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+  <header>
+    <!--Barra de navegacion-->
+    <nav class="navbar fixed-top">
+      <div class="container-fluid">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bi bi-list"></i>
+        </label>
+        <a href="#" class="porvenir">
+          <img src="img\Porvenir.png" alt="">
+        </a>
+        <ul class="reset">
+          <li class="reset2"><a href="index.html" class="impor">Inventario</a></li>
+          <li class="reset2"><a href="Ventas_admin.html" class="impor">Ventas</a></li>
+          <li class="reset2"><a href="domicilios_admin.html" class="impor">Domicilios</a></li>
+          <li class="reset2"><a href="https://aresbre2123.github.io/pagina/login.html" class="impor"><i class="bi bi-person" style="width: 15%;"></i>Cerrar Sesion</a></li>
+        </ul>
+
+        <!--Comienzo pantalla de carrito-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <img class="carrito" src="C:\Users\santo\Downloads\PAGINA\img\carrito.png" alt="">
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Carrito</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
+              <button class="btn btn-success" type="submit">Buscar</button>
+            </form>
+            <hr>
+            <!--Productos del carrito-->
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+              <li class="nav-item">
+                <div class="card mb-3" style="max-width: 600px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img\huevos.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Huevos</h5>
+                        <p class="card-text">si</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="card mb-3" style="max-width: 600px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img\huevos.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Huevos</h5>
+                        <p class="card-text">si</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="card mb-3" style="max-width: 600px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img\huevos.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Huevos</h5>
+                        <p class="card-text">si</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="card mb-3" style="max-width: 600px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img\huevos.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Huevos</h5>
+                        <p class="card-text">si</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="card mb-3" style="max-width: 600px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img\huevos.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Huevos</h5>
+                        <p class="card-text">si</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+  <br><br><br><br>
+
+    <div  class="row">
+      <!--col menu-->
+      <div class="buni col-3 ">
+
+          <div class="rol text-center">
+              <center>
+                <img src="C:\Users\santo\Downloads\PAGINA\img\tupapa.jpg" class="logo">
+              </center>
+              
+              <h5>Santiago Rojas</h5>
+              <h6 class="mb-5">Admin</h6>
+          </div>
+
+          <div class="derecho">
+            <h3>Clientes</h3>
+          
+            <ul>
+              <li><a href="crear_cliente.html" class="link">Crear Cliente</a></li>
+              <li><a href="Ventas_admin.html" class="link">Buscar Cliente</a></li>
+          </ul>
+
+          <h3>Ventas</h3>
+          <ul>
+              <li><a href="crear_venta.html" class="link">Crear Venta</a></li>
+              <li><a href="buscar_venta.html" class="link">Buscar Venta</a></li>
+              <li><a href="buscar_categoria.html" class="link">Buscar Categoria</a></li>
+          </ul>
+        </div>
+    </div>
+
+      <!--col contenido-->
+    <div class="col-9">
+        <table id="example" class="table table-striped" style="width:100%">
+          <h1>Clientes</h1>
+          <br>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Tipo de Doc.</th>
+              <th>Documento</th>
+              <th>Correo</th>
+              <th>Contraseña</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Luis Andres</td>
+              <td>Tovar Rodriguez</td>
+              <td>C.C</td>
+              <td>111111111</td>
+              <td>luis@gmail.com</td>
+              <td>luis1450</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria Elena</td>
+              <td>Lopez Gomez</td>
+              <td>C.C</td>
+              <td>222222222</td>
+              <td>maria@gmail.com</td>
+              <td>maria2023</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Juan Carlos</td>
+              <td>Rivera Martinez</td>
+              <td>C.C</td>
+              <td>333333333</td>
+              <td>juan@gmail.com</td>
+              <td>juan1122</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Andrea Isabel</td>
+              <td>Garcia Lopez</td>
+              <td>C.C</td>
+              <td>444444444</td>
+              <td>andrea@gmail.com</td>
+              <td>andrea123</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Carlos Alberto</td>
+              <td>Sanchez Perez</td>
+              <td>C.C</td>
+              <td>555555555</td>
+              <td>carlos@gmail.com</td>
+              <td>carlos456</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Laura Marcela</td>
+              <td>Castro Gomez</td>
+              <td>C.C</td>
+              <td>666666666</td>
+              <td>laura@gmail.com</td>
+              <td>laura789</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Fernando Jose</td>
+              <td>Martinez Suarez</td>
+              <td>C.C</td>
+              <td>777777777</td>
+              <td>fernando@gmail.com</td>
+              <td>fernando1011</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Camila Andrea</td>
+              <td>Rojas Rodriguez</td>
+              <td>C.C</td>
+              <td>888888888</td>
+              <td>camila@gmail.com</td>
+              <td>camila1213</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Jorge Luis</td>
+              <td>Gutierrez Soto</td>
+              <td>C.C</td>
+              <td>999999999</td>
+              <td>jorge@gmail.com</td>
+              <td>jorge1415</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ana Maria</td>
+              <td>Perez Gomez</td>
+              <td>C.C</td>
+              <td>1010101010</td>
+              <td>ana@gmail.com</td>
+              <td>ana1617</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>David Alejandro</td>
+              <td>Ortega Hernandez</td>
+              <td>C.C</td>
+              <td>1111111111</td>
+              <td>david@gmail.com</td>
+              <td>david1819</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Carlos Eduardo</td>
+              <td>Ramirez Lopez</td>
+              <td>C.C</td>
+              <td>1313131313</td>
+              <td>carlos@gmail.com</td>
+              <td>carlos2122</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Diana Carolina</td>
+              <td>Gomez Perez</td>
+              <td>C.C</td>
+              <td>1414141414</td>
+              <td>diana@gmail.com</td>
+              <td>diana2324</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Andres Felipe</td>
+              <td>Martinez Gutierrez</td>
+              <td>C.C</td>
+              <td>1515151515</td>
+              <td>andres@gmail.com</td>
+              <td>andres2425</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Julieta Alejandra</td>
+              <td>Lopez Martinez</td>
+              <td>C.C</td>
+              <td>1616161616</td>
+              <td>julieta@gmail.com</td>
+              <td>julieta2627</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Pedro Luis</td>
+              <td>Gomez Rodriguez</td>
+              <td>C.C</td>
+              <td>1717171717</td>
+              <td>pedro@gmail.com</td>
+              <td>pedro2829</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Marcela Alejandra</td>
+              <td>Rivera Gomez</td>
+              <td>C.C</td>
+              <td>1818181818</td>
+              <td>marcela@gmail.com</td>
+              <td>marcela3031</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Mauricio Alejandro</td>
+              <td>Rodriguez Perez</td>
+              <td>C.C</td>
+              <td>1919191919</td>
+              <td>mauricio@gmail.com</td>
+              <td>mauricio3233</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Sofia Isabel</td>
+              <td>Gomez Rodriguez</td>
+              <td>C.C</td>
+              <td>2020202020</td>
+              <td>sofia@gmail.com</td>
+              <td>sofia3435</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Luisa Fernanda</td>
+              <td>Hernandez Gutierrez</td>
+              <td>C.C</td>
+              <td>2121212121</td>
+              <td>luisa@gmail.com</td>
+              <td>luisa3637</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ricardo Antonio</td>
+              <td>Martinez Ramirez</td>
+              <td>C.C</td>
+              <td>2222222222</td>
+              <td>ricardo@gmail.com</td>
+              <td>ricardo3839</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>María Fernanda</td>
+              <td>Rodríguez López</td>
+              <td>C.C</td>
+              <td>2323232323</td>
+              <td>maria@gmail.com</td>
+              <td>maria4041</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Juan Camilo</td>
+              <td>García Martínez</td>
+              <td>C.C</td>
+              <td>2424242424</td>
+              <td>juan@gmail.com</td>
+              <td>juan4143</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Laura Catalina</td>
+              <td>Herrera Rodríguez</td>
+              <td>C.C</td>
+              <td>2525252525</td>
+              <td>laura@gmail.com</td>
+              <td>laura4445</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Andrea Carolina</td>
+              <td>Pérez Gómez</td>
+              <td>C.C</td>
+              <td>2626262626</td>
+              <td>andrea@gmail.com</td>
+              <td>andrea4647</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Daniel Alejandro</td>
+              <td>Gómez Rodríguez</td>
+              <td>C.C</td>
+              <td>2727272727</td>
+              <td>daniel@gmail.com</td>
+              <td>daniel4849</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Paula Andrea</td>
+              <td>López Gómez</td>
+              <td>C.C</td>
+              <td>2828282828</td>
+              <td>paula@gmail.com</td>
+              <td>paula4950</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Sara Isabel</td>
+              <td>Rodríguez Gutiérrez</td>
+              <td>C.C</td>
+              <td>2929292929</td>
+              <td>sara@gmail.com</td>
+              <td>sara5051</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Diego Alejandro</td>
+              <td>Martínez Pérez</td>
+              <td>C.C</td>
+              <td>3030303030</td>
+              <td>diego@gmail.com</td>
+              <td>diego5152</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ana María</td>
+              <td>Castro Gómez</td>
+              <td>C.C</td>
+              <td>3131313131</td>
+              <td>ana@gmail.com</td>
+              <td>ana5354</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Luisa Fernanda</td>
+              <td>Hernández Martínez</td>
+              <td>C.C</td>
+              <td>3232323232</td>
+              <td>luisa@gmail.com</td>
+              <td>luisa5556</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Jorge Andrés</td>
+              <td>Rodríguez Gómez</td>
+              <td>C.C</td>
+              <td>3333333333</td>
+              <td>jorge@gmail.com</td>
+              <td>jorge5758</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Carolina</td>
+              <td>López Martínez</td>
+              <td>C.C</td>
+              <td>3434343434</td>
+              <td>carolina@gmail.com</td>
+              <td>carolina5960</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Andrés Felipe</td>
+              <td>Hernández Rodríguez</td>
+              <td>C.C</td>
+              <td>3535353535</td>
+              <td>andres@gmail.com</td>
+              <td>andres6162</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Paola</td>
+              <td>Gómez Rodríguez</td>
+              <td>C.C</td>
+              <td>3636363636</td>
+              <td>paola@gmail.com</td>
+              <td>paola6364</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Julio César</td>
+              <td>Rodríguez Gómez</td>
+              <td>C.C</td>
+              <td>3737373737</td>
+              <td>julio@gmail.com</td>
+              <td>julio6566</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Valentina</td>
+              <td>Martínez López</td>
+              <td>C.C</td>
+              <td>3838383838</td>
+              <td>valentina@gmail.com</td>
+              <td>valentina6768</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Camilo</td>
+              <td>Gómez Rodríguez</td>
+              <td>C.C</td>
+              <td>3939393939</td>
+              <td>camilo@gmail.com</td>
+              <td>camilo6970</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ana Sofía</td>
+              <td>Rodríguez Gómez</td>
+              <td>C.C</td>
+              <td>4040404040</td>
+              <td>ana@gmail.com</td>
+              <td>ana7172</td>
+              <td>
+                <button class="bt-verde">
+                  <a href="error_400.html"><i class="fas fa-edit"></i></a>
+                </button>
+                <button class="bt-rojo">
+                  <i class="fas fa-times"></i>
+                </button>
+              </td>
+            </tr>
+            </tfoot>
+        </table>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  // Obtener todos los botones con la clase 'bt-rojo'
+  var botonesRojo = document.querySelectorAll('.bt-rojo');
+
+  // Iterar sobre cada botón y agregar un controlador de eventos onclick
+  botonesRojo.forEach(function(boton) {
+      boton.addEventListener('click', function() {
+          // Obtener el elemento padre 'tr' del botón
+          var fila = this.closest('tr');
+          
+          // Eliminar la fila del DOM
+          fila.remove();
+
+          window.alert('se a borrado con exito ese cliente');
+      });
+  });
+</script>
+
+</body>
+</html>
